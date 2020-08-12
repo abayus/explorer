@@ -1,0 +1,24 @@
+<html>
+<head>
+<script type="text/javascript">
+    function show_confirm()
+    {
+        var c=confirm("Do you want to create an account?");
+        if (c==true)
+        {
+            document.getElementById("frm1").setAttribute("action","create.php");
+        }
+        document.getElementById("frm1").submit();
+    }
+</script>
+</head>
+<body>
+    <form id="frm1" action="login.php">
+    <label for="email">Email:</label>
+    <input type="text" name="email" />
+    <label for="password">Password:</label>
+    <input type="password" name="password" />
+    <input type="button" onclick="show_confirm()" value="Submit" />
+    </form>
+</body>
+</html>
